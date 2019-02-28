@@ -19,10 +19,5 @@ from shop import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.pets_list, name="pets-list"),
-    path('<int:pet_id>/', views.pet_details, name="pet-details"),
-    path('delete/<int:pet_id>/', views.delete_pet, name="delete-pet"),
-    path('create/', views.create_pet, name="create-pet"),
-    path('update/<int:pet_id>/', views.update_pet, name="update-pet"),
 
 ]
