@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> List </title>
+</head>
+<body>
+    {% for pet in pets %}
+        <ul>
+            <li>
+                <a href="{% url 'pet-details' pet.id %}" ><h3>{{pet.name}}</h3></a>
+            </li>
+            <li>
+                <p>Age: {{pet.age}}</p>
+            </li>
+            <li>
+            <a href="{% url 'delete-pet' pet_id=pet.id %}">Delete</a>
+        </li>
+        </ul><br>
+    {% endfor %}
+</body>
+</html>
